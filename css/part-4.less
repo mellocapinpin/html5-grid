@@ -1,8 +1,8 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 50px 200px;
     grid-gap: 5px;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 200px;
 
     div {
         color: #ccc;
@@ -30,6 +30,38 @@
 
         &:nth-child(6) {
             background-color: violet;
+        }
+    }
+}
+
+.container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+
+    div {
+        &:first-child {
+            grid-column: ~"1 / 13";
+        }
+
+        &:nth-child(2) {
+            grid-column: span 6;
+        }
+
+        &:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        &:nth-child(4) {
+            grid-column: span 3;
+            grid-row: 2 / span 2;
+        }
+
+        &:nth-child(5) {
+            grid-column: span 9;
+        }
+
+        &:nth-child(6) {
+            grid-column: span 12;
         }
     }
 }
