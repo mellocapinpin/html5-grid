@@ -1,0 +1,84 @@
+// color definitions
+
+.container div {
+    color: #ccc;
+    padding: 10px;
+
+    &:first-child {
+        background-color: red;
+    }
+
+    &:nth-child(2) {
+        background-color: orange;
+    }
+
+    &:nth-child(3) {
+        background-color: yellow;
+    }
+
+    &:nth-child(4) {
+        background-color: green;
+    }
+
+    &:nth-child(5) {
+        background-color: blue;
+    }
+
+    &:nth-child(6) {
+        background-color: violet;
+    }
+}
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 1em;
+}
+
+.container-1 {
+    div {
+        &:first-child {
+            grid-column: 4 / span 9;
+        }
+
+        &:nth-child(2) {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 3;
+        }
+
+        &:nth-child(3) {
+            grid-column: span 9;
+        }
+
+        &:nth-child(4) {
+            grid-column: span 12;
+        }
+    }
+}
+
+.container-2 {
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m m c c c c c c c c c"
+        "m m m f f f f f f f f f";
+
+    div {
+        &:first-child {
+            grid-area: h;
+        }
+
+        &:nth-child(2) {
+            grid-area: m;
+        }
+
+        &:nth-child(3) {
+            grid-area: c;
+        }
+
+        &:nth-child(4) {
+            grid-area: f;
+        }
+    }
+}
