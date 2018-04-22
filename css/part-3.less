@@ -1,3 +1,6 @@
+@import "fontawesome/less/fontawesome.less";
+@import "fontawesome/less/fa-solid.less";
+
 li > {
     a {
         display: block;
@@ -24,32 +27,9 @@ nav.primary {
             background-color: #eee;
 
             > li {
-                position: relative;
-
-                &:hover {
-                    ul.sub {
-                        display: block;
-                    }
-                }
-
                 &.logout {
                     margin-left: auto;
                 }
-
-                > a {
-                    line-height: 40px;
-                }
-            }
-        }
-
-        &.sub {
-            display: none;
-            position: absolute;
-            width: 200px;
-            background-color: #eee;
-
-            li {
-                position: relative;
 
                 ul {
                     display: none;
@@ -58,17 +38,40 @@ nav.primary {
                     width: 200px;
                     top: 0;
                     left: 200px;
+                    box-shadow: 1px 2px 3px #666;
                 }
 
-                &:hover > ul {
-                    display: block;
+                > ul {
+                    top: auto;
+                    left: auto;
+                }
+
+                > a {
+                    line-height: 40px;
                 }
             }
         }
 
         li {
+            position: relative;
+
             &:hover {
-                background-color: rgba(200, 200, 200, .5);
+                background-color: rgba(180, 180, 180, .5);
+
+                > ul {
+                    display: block;
+                }
+
+                > a {
+                    color: #fff;
+                }
+            }
+
+            &.parent > a::after {
+                content: "\f105";
+                float: right;
+                font-family: 'FontAwesome';
+                margin-left: 10px;
             }
         }
 
@@ -77,6 +80,7 @@ nav.primary {
             padding: 0 10px;
             line-height: 30px;
             text-decoration: none;
+            color: inherit;
         }
     }
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css\part-3.css">
     <link rel="stylesheet/less" type="text/css" href="css\part-3.less" />
     <script type="text/javascript" src="less.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,19 +23,19 @@
         <ul class="navigation">
             <li class="top-level"><a href="#" alt="">Home</a></li>
             <li class="top-level"><a href="#" alt="">About Us</a></li>
-            <li class="top-level"><a href="#" alt="">Products</a>
-                <ul class="sub">
+            <li class="top-level parent"><a href="#" alt="">Products</a>
+                <ul>
                     <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a>
+                    <li class="parent"><a href="#">link 2</a>
                         <ul>
                             <li><a href="#">link 2.1</a></li>
                             <li><a href="#">link 2.2</a></li>
-                            <li><a href="#">link 2.3</a>
-                            <ul>
-                                <li><a href="#">link 2.3.1</a></li>
-                                <li><a href="#">link 2.3.2</a></li>
-                                <li><a href="#">link 2.3.3</a></li>
-                            </ul>
+                            <li class="parent"><a href="#">link 2.3</a>
+                                <ul>
+                                    <li><a href="#">link 2.3.1</a></li>
+                                    <li><a href="#">link 2.3.2</a></li>
+                                    <li><a href="#">link 2.3.3</a></li>
+                                </ul>
                             </li>
                             <li><a href="#">link 2.4</a></li>
                             <li><a href="#">link 2.5</a></li>
