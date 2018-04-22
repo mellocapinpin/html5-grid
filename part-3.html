@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample store</title>
     <link rel="stylesheet" href="css\part-3.css">
+    <link rel="stylesheet/less" type="text/css" href="css\part-3.less" />
+    <script type="text/javascript" src="less.js"></script>
 </head>
 
 <body>
@@ -24,10 +26,16 @@
                 <ul class="sub">
                     <li><a href="#">link 1</a></li>
                     <li><a href="#">link 2</a>
-                        <ul class="sub">
+                        <ul>
                             <li><a href="#">link 2.1</a></li>
                             <li><a href="#">link 2.2</a></li>
-                            <li><a href="#">link 2.3</a></li>
+                            <li><a href="#">link 2.3</a>
+                            <ul>
+                                <li><a href="#">link 2.3.1</a></li>
+                                <li><a href="#">link 2.3.2</a></li>
+                                <li><a href="#">link 2.3.3</a></li>
+                            </ul>
+                            </li>
                             <li><a href="#">link 2.4</a></li>
                             <li><a href="#">link 2.5</a></li>
                         </ul>
@@ -38,6 +46,7 @@
                 </ul>
             </li>
             <li class="top-level"><a href="#" alt="">Contact Us</a></li>
+            <li class="top-level logout"><a href="#" alt="">Logout</a></li>
         </ul>
     </nav>
 
@@ -103,6 +112,7 @@
             </ul>
         </section>
         <section class="section-4">
+            <h2>Categories</h2>
             <!-- ul.categories>li*10>a[href="#"]>lorem1 -->
             <ul class="categories">
                 <li><a href="#">Lorem.</a></li>

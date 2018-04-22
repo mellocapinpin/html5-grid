@@ -1,6 +1,11 @@
+:root {
+    --image-width: 120px;
+    --image-height: 120px;
+}
 img {
     display: block;
     width: 100%;
+    height: 100%;
 }
 
 .container div {
@@ -18,18 +23,31 @@ img {
 }
 
 .container {
+    // override variable values
+    --image-width: 80px;
+    --image-height: 80px;
+
     ul.images {
         list-style: none;
         padding: 0;
         margin: 0;
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-auto-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(var(--image-width), 1fr));
+        grid-auto-rows: var(--image-height);
         grid-auto-flow: dense;
 
         li {
-            &.small {}
+            overflow: hidden;
+
+            img {
+                // display: none;
+            }
+            background: #ccc;
+
+            &.small {
+                // default square
+            }
 
             &.big {
                 grid-column: span 2;
