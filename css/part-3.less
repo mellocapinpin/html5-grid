@@ -38,7 +38,7 @@ nav.primary {
                     width: 200px;
                     top: 0;
                     left: 200px;
-                    box-shadow: 1px 2px 3px #666;
+                    box-shadow: 2px 2px 3px #333;
                     transition: opacity 200ms ease-out 150ms;
                 }
 
@@ -73,6 +73,10 @@ nav.primary {
                 float: right;
                 font-family: 'FontAwesome';
                 margin-left: 10px;
+            }
+
+            &.parent.top-level > a::after {
+                content: "\f107";
             }
         }
 
